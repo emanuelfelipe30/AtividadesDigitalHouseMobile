@@ -8,6 +8,7 @@ const val TRANSFERIR = 3
 const val REMOVER_CONTA = 3
 const val RELATORIO = 4
 const val VOLTAR_MENU = 5
+const val SAIR = 5
 const val MSG_VOLTAR_MENU = "Voltando para o menu...\n\n\n"
 
 fun main(){
@@ -59,12 +60,14 @@ fun main(){
                 banco.mostrarDados()
             }
 
-            VOLTAR_MENU -> println(MSG_VOLTAR_MENU)
-            else -> println("Opção incorreta! $MSG_VOLTAR_MENU")
+            SAIR -> break
+            else -> println("Opção incorreta!")
 
         }
 
     }while(true)
+
+    println("Finalizando o programa...")
 }
 
 fun escolherOpcaoMenu(): Int{
